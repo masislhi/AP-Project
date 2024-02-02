@@ -1,5 +1,6 @@
 #include "desk.h"
 #include "ui_desk.h"
+#include "task.h"
 
 desk::desk(QWidget *parent)
     : QWidget(parent)
@@ -12,3 +13,11 @@ desk::~desk()
 {
     delete ui;
 }
+
+void desk::on_pushButton_clicked()
+{
+    Task *t = new Task();
+    t->user(use);
+    t->show();
+}
+

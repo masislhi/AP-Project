@@ -27,6 +27,7 @@ void MainWindow::on_pushButton_clicked()
             close();
             QMessageBox::information(this,"sign in","you have enterd");
             desk *d=new desk();
+            d->user(user);
             d->show();
 
         }

@@ -1,30 +1,30 @@
-#ifndef DESK_H
-#define DESK_H
+#ifndef NEWTASK_H
+#define NEWTASK_H
 
 #include <QWidget>
 
 namespace Ui {
-class desk;
+class newtask;
 }
 
-class desk : public QWidget
+class newtask : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit desk(QWidget *parent = nullptr);
+    explicit newtask(QWidget *parent = nullptr);
     void user(QString & rec)
     {
         use=rec;
     }
-    ~desk();
+    ~newtask();
 
 private slots:
     void on_pushButton_clicked();
 
 private:
-    Ui::desk *ui;
+    Ui::newtask *ui;
     QString use;
 };
 
-#endif // DESK_H
+#endif // NEWTASK_H
