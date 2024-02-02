@@ -12,20 +12,26 @@ SOURCES += \
     desk.cpp \
     main.cpp \
     mainwindow.cpp \
+    newtask.cpp \
     passc.cpp \
-    signup.cpp
+    signup.cpp \
+    task.cpp
 
 HEADERS += \
     desk.h \
     mainwindow.h \
+    newtask.h \
     passc.h \
-    signup.h
+    signup.h \
+    task.h
 
 FORMS += \
     desk.ui \
     mainwindow.ui \
+    newtask.ui \
     passc.ui \
-    signup.ui
+    signup.ui \
+    task.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
