@@ -13,7 +13,7 @@ class desk : public QWidget
 
 public:
     explicit desk(QWidget *parent = nullptr);
-    void user(QString & rec)
+    void user(QString  rec)
     {
         use=rec;
     }

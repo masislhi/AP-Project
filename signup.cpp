@@ -2,6 +2,7 @@
 #include "ui_signup.h"
 #include <QMap>
 #include <QMessageBox>
+#include "mainwindow.h"
 
 bool ValidPass(QString& pass)
 {
@@ -30,13 +31,11 @@ bool ValidPass(QString& pass)
     return true;
 
 }
-signup::signup(QMap<QString,QString>* page,QMap<QString,QString>* mlist,QWidget *parent)
+signup::signup(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::signup)
 {
     ui->setupUi(this);
-    this->page=page;
-    this->mlist=mlist;
 }
 
 signup::~signup()
@@ -49,7 +48,7 @@ void signup::on_pushButton_clicked()
     QString username=ui->txt_user->text();
     QString pass=ui->txt_pass->text();
     QString mail=ui->txt_mail->text();
-    if(mlist->contains(mail))
+    if(mlist.contains(mail))
     {
         QMessageBox::warning(this,"sign up","you have signed up before!");
         close();
@@ -57,13 +56,17 @@ void signup::on_pushButton_clicked()
 
     if(ValidPass(pass))
     {
-        page->insert(username,pass);
-        mlist->insert(mail,pass);
+        page.insert(username,pass);
+        mlist.insert(mail,pass);
         if(ui->txt_mail->text().isEmpty()|| ui->txt_pass->text().isEmpty()  || ui->txt_user->text().isEmpty())
             QMessageBox::warning(this,"sign up","fill all the blanks!!");
 
         close();
     }
+    MainWindow *w=new MainWindow();
+    w->reclist(mlist);
+    w->recmap(page);
+    w->show();
 
 }
 
