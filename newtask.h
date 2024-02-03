@@ -13,7 +13,7 @@ class newtask : public QWidget
 
 public:
     explicit newtask(QWidget *parent = nullptr);
-    void user(QString & rec)
+    void user(QString  rec)
     {
         use=rec;
     }
@@ -25,6 +25,7 @@ private slots:
 private:
     Ui::newtask *ui;
     QString use;
+
 };
 
 #endif // NEWTASK_H

@@ -27,7 +27,7 @@ void MainWindow::on_pushButton_clicked()
             close();
             QMessageBox::information(this,"sign in","you have enterd");
             desk *d=new desk();
-            d->user(user);
+            d->user(list.key(pass));
             d->show();
 
         }
@@ -41,7 +41,8 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    signup *s=new signup(&map,&list);
+    close();
+    signup *s=new signup();
     s->show();
 }
 

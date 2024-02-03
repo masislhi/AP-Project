@@ -16,6 +16,14 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
+    void recmap(QMap<QString,QString> rec)
+    {
+        map=rec;
+    }
+    void reclist(QMap<QString,QString> rec)
+    {
+        list=rec;
+    }
     ~MainWindow();
 
 private slots:
