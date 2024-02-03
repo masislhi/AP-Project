@@ -1,11 +1,12 @@
 #include "taskmanager.h"
-#include "ui_taskmanager.h"
-#include<QObject>
 #include <QApplication>
 #include <QLineEdit>
-#include <QVBoxLayout>
-#include <QPushButton>
 #include <QList>
+#include <QObject>
+#include <QPushButton>
+#include <QVBoxLayout>
+#include "organization.h"
+#include "ui_taskmanager.h"
 
 TaskManager::TaskManager(QWidget *parent)
     : QMainWindow(parent)
@@ -21,7 +22,7 @@ TaskManager::~TaskManager()
 }
 void TaskManager::Create_Organ(const QString& name ,const QString& task,const QString& information)
 {
-    Organization New_Organ(name,task,information);
+    Organization *New_Organ = new Organization(name, task, information);
     organizations.push_back(New_Organ);
     emit organizationCreatedSignal(name,task ,information);
 }
@@ -32,19 +33,18 @@ void TaskManager::on_Send_Info_Organ_clicked()
     QString Name_Organ=ui->N_Organ->text();
     QString Organization_Task=ui->Organ_Task->text();
     QString Organization_Information=ui->Organ_Info->text();
-    Create_Organ(Name_Organ,Organization_Task,Organization_Information)
+    Create_Organ(Name_Organ,Organization_Task,Organization_Information);
 }
 void TaskManager::on_Add_person_clicked()
 {
     QString Name_person=ui->N_person->text();
     QString Rol_Person =ui->Rol_person->text();
-
 }
 
 void TaskManager::on_Delete_organization_clicked()
 {
-    QString Delete_organization=ui->Delete_organization->text();
-
+    QString Name_Organ_del=ui->Delete_organization->text();
+    //Organization
 }
 
 

@@ -13,6 +13,7 @@ class Organization: public QWidget{
 
 public:
     explicit Organization(QString name,QString task,QString information,QWidget *parent = nullptr);
+    Organization(QString name, QString task, QWidget *parent = nullptr);
     ~Organization();
     void addMember(const QString& member ,const QString& memberRol);
 

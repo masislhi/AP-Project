@@ -27,7 +27,7 @@ private slots:
 
     void on_Send_Info_Organ_clicked();
 
-    void on_pushButton_7_clicked();
+    void on_Add_person_clicked();
 
     void on_Delete_organization_clicked();
 
@@ -35,12 +35,11 @@ private slots:
 
     void on_Delete_member_clicked();
 
-    void on_Add_person_clicked();
 
 private:
 
    // Organization* organization;
-    std::vector<Organization>organizations;
+    std::vector<Organization *> organizations;
     Team* team;
 private:
     Ui::TaskManager *ui;

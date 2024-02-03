@@ -10,7 +10,15 @@ Organization::Organization(QString name ,QString task,QString information,QWidge
     this->Task_Organization=task;
     Info_Organization=information;
 }
-
+Organization::Organization(QString name, QString task, QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::Organization)
+{
+    ui->setupUi(this);
+    this->m_name = name;
+    this->Task_Organization = task;
+    Info_Organization = "";
+}
 Organization::~Organization()
 {
     delete ui;
@@ -28,17 +36,18 @@ void Organization::addMember(const QString& member ,const QString& memberRol)
     emit memberAdded(member);
 }
 
-void Organization::editOrganization(const QString& newName)
-{
-
-    m_name = newName;
-    emit organizationEdited(newName);
-}
 void Organization::deleteOrganization()
 {
     m_name.clear();
     m_memberList.clear();
     emit organizationDeleted();
+}
+
+void Organization::editOrganization(const QString& newName)
+{
+
+    m_name = newName;
+    emit organizationEdited(newName);
 }
 
 void Organization::removeMember(const QString& member)

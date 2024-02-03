@@ -4,12 +4,12 @@
 #include <algorithm>
 #include <iostream>
 Team::Team(std::string name, std::string task)
-    : Organization(QString::fromStdString(name))
+    : Organization(QString::fromStdString(name), QString::fromStdString(task))
 {}
 
 Team::~Team()
 {
-    deleteTeam();
+    //deleteTeam();
 }
 
 
@@ -24,7 +24,7 @@ void Team::removeTeamMember(Person* member)
     if (it != m_teamMembers.end())
     {
         m_teamMembers.erase(it);
-        removeMember(member);
+        removeMember(QString::fromStdString(member->name()));
         delete member;
     }
 }
@@ -38,7 +38,7 @@ void Team::listTeamMembers()
 {
     for (Person* member : m_teamMembers)
     {
-        std::cout << member->getName() << " - " << member->getRole() << std::endl;
+        std::cout << member->name() << " - " << member->role() << std::endl;
     }
 }
 
@@ -46,17 +46,16 @@ void Team::filterTeamMembers(std::string roleFilter)
 {
     for (Person* member : m_teamMembers)
     {
-        if (member->getRole() == roleFilter)
-        {
-            std::cout << member->getName() << " - " << member->getRole() << std::endl;
+        if (member->role() == roleFilter) {
+            std::cout << member->name() << " - " << member->role() << std::endl;
         }
     }
 }
 
 void Team::sortTeamMembers()
 {
-    std::sort(m_teamMembers.begin(), m_teamMembers.end(), [](Person* a, Person* b) {
-        return a->getName() < b->getName();
+    std::sort(m_teamMembers.begin(), m_teamMembers.end(), [](Person *a, Person *b) {
+        return a->name() < b->name();
     });
 }
 //Team::~Team()
