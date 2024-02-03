@@ -18,22 +18,29 @@ class TaskManager : public QMainWindow
 public:
     TaskManager(QWidget *parent = nullptr);
     ~TaskManager();
-public slots:
 
+    void Create_Organ(const QString& name ,const QString& task,const QString& information);
 
+signals:
+    void organizationCreatedSignal(QString,QString,QString);
 private slots:
 
     void on_Send_Info_Organ_clicked();
 
     void on_pushButton_7_clicked();
 
-    void on_pushButton_3_clicked();
-
     void on_Delete_organization_clicked();
+
+    void on_Chenge_member_Rol_clicked();
+
+    void on_Delete_member_clicked();
+
+    void on_Add_person_clicked();
 
 private:
 
-    Organization* organization;
+   // Organization* organization;
+    std::vector<Organization>organizations;
     Team* team;
 private:
     Ui::TaskManager *ui;

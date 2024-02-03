@@ -12,11 +12,13 @@ SOURCES += \
     Team.cpp \
     main.cpp \
     organization.cpp \
+    person.cpp \
     taskmanager.cpp
 
 HEADERS += \
     Team.h \
     organization.h \
+    person.h \
     taskmanager.h
 
 FORMS += \

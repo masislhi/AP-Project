@@ -33,7 +33,7 @@
      <string notr="true">background-color: rgb(191, 191, 191);</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab_5">
      <property name="styleSheet">
@@ -83,7 +83,7 @@ color: rgb(255, 255, 0);</string>
          <x>10</x>
          <y>30</y>
          <width>601</width>
-         <height>111</height>
+         <height>101</height>
         </rect>
        </property>
        <layout class="QFormLayout" name="formLayout">
@@ -104,20 +104,6 @@ color: rgb(255, 255, 0);</string>
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label_7">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(125, 125, 125);
-font: 700 10pt &quot;Segoe UI&quot;;
-border-top-color: rgb(255, 42, 81);
-font: 8pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 0);</string>
-            </property>
-            <property name="text">
-             <string>Name manager </string>
-            </property>
-           </widget>
-          </item>
-          <item>
            <widget class="QLabel" name="label_8">
             <property name="styleSheet">
              <string notr="true">background-color: rgb(125, 125, 125);
@@ -127,7 +113,7 @@ font: 8pt &quot;Segoe UI&quot;;
 color: rgb(255, 255, 0);</string>
             </property>
             <property name="text">
-             <string>Organization programs</string>
+             <string>Task organization</string>
             </property>
            </widget>
           </item>
@@ -157,10 +143,7 @@ color: rgb(255, 255, 0);</string>
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="Name_Manager_Organ"/>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="Organ_program"/>
+           <widget class="QLineEdit" name="Organ_Task"/>
           </item>
           <item>
            <widget class="QLineEdit" name="Organ_Info"/>
@@ -251,7 +234,7 @@ color: rgb(255, 255, 0);</string>
       <property name="title">
        <string>Add person</string>
       </property>
-      <widget class="QPushButton" name="pushButton_7">
+      <widget class="QPushButton" name="Add_person">
        <property name="geometry">
         <rect>
          <x>300</x>
@@ -361,11 +344,11 @@ color: rgb(255, 255, 0);</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_7"/>
+         <widget class="QLineEdit" name="L_name_Member"/>
         </item>
        </layout>
       </widget>
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="Delete_member">
        <property name="geometry">
         <rect>
          <x>270</x>
@@ -400,9 +383,9 @@ color: rgb(255, 255, 0);</string>
        <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="title">
-       <string>Chenge person</string>
+       <string>Chenge memeber roles</string>
       </property>
-      <widget class="QPushButton" name="pushButton_8">
+      <widget class="QPushButton" name="Chenge_member_Rol">
        <property name="geometry">
         <rect>
          <x>300</x>
@@ -434,7 +417,7 @@ color: rgb(255, 255, 0);</string>
        </property>
        <layout class="QGridLayout" name="gridLayout">
         <item row="1" column="1">
-         <widget class="QLineEdit" name="lineEdit_12"/>
+         <widget class="QLineEdit" name="Rol_member"/>
         </item>
         <item row="1" column="0">
          <widget class="QLabel" name="label_16">
@@ -447,27 +430,26 @@ font: 8pt &quot;Segoe UI&quot;;
 color: rgb(255, 255, 0);</string>
           </property>
           <property name="text">
-           <string>Rol person</string>
+           <string>New Rol member</string>
           </property>
          </widget>
         </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="Name_member"/>
+        </item>
         <item row="0" column="0">
-         <widget class="QLabel" name="label_15">
+         <widget class="QLabel" name="label_12">
           <property name="styleSheet">
            <string notr="true">background-color: rgb(125, 125, 125);
-font: 14pt &quot;Segoe UI&quot;;
 font: 700 10pt &quot;Segoe UI&quot;;
 border-top-color: rgb(255, 42, 81);
 font: 8pt &quot;Segoe UI&quot;;
 color: rgb(255, 255, 0);</string>
           </property>
           <property name="text">
-           <string>Name       </string>
+           <string>Name member </string>
           </property>
          </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="lineEdit_11"/>
         </item>
        </layout>
       </widget>
@@ -489,450 +471,6 @@ color: rgb(255, 255, 0);</string>
       </property>
       <property name="text">
        <string>View organizations</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_3">
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 170, 127);
-background-color: rgb(255, 232, 187);</string>
-     </property>
-     <attribute name="title">
-      <string>Tab 1</string>
-     </attribute>
-     <widget class="QGroupBox" name="groupBox_17">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>781</width>
-        <height>131</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);</string>
-      </property>
-      <property name="title">
-       <string>creat Project</string>
-      </property>
-      <widget class="QPushButton" name="pushButton_20">
-       <property name="geometry">
-        <rect>
-         <x>630</x>
-         <y>60</y>
-         <width>101</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(125, 125, 125);
-font: 700 10pt &quot;Segoe UI&quot;;
-border-top-color: rgb(255, 42, 81);
-font: 8pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 0);</string>
-       </property>
-       <property name="text">
-        <string>OK</string>
-       </property>
-      </widget>
-      <widget class="QWidget" name="formLayoutWidget_5">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>40</y>
-         <width>601</width>
-         <height>71</height>
-        </rect>
-       </property>
-       <layout class="QFormLayout" name="formLayout_5">
-        <item row="0" column="0">
-         <layout class="QVBoxLayout" name="verticalLayout_9">
-          <item>
-           <widget class="QLabel" name="label_38">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(125, 125, 125);
-font: 700 10pt &quot;Segoe UI&quot;;
-border-top-color: rgb(255, 42, 81);
-font: 8pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 0);</string>
-            </property>
-            <property name="text">
-             <string>name Project</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_41">
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(125, 125, 125);
-font: 700 10pt &quot;Segoe UI&quot;;
-border-top-color: rgb(255, 42, 81);
-font: 8pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 0);</string>
-            </property>
-            <property name="text">
-             <string>Project information</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item row="0" column="1">
-         <layout class="QVBoxLayout" name="verticalLayout_10">
-          <item>
-           <widget class="QLineEdit" name="lineEdit_34"/>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="lineEdit_37"/>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_18">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>150</y>
-        <width>401</width>
-        <height>111</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);</string>
-      </property>
-      <property name="title">
-       <string>Add person</string>
-      </property>
-      <widget class="QWidget" name="horizontalLayoutWidget_19">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>30</y>
-         <width>291</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_19">
-        <item>
-         <widget class="QLabel" name="label_39">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(125, 125, 125);
-font: 14pt &quot;Segoe UI&quot;;
-font: 700 10pt &quot;Segoe UI&quot;;
-border-top-color: rgb(255, 42, 81);
-font: 8pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 0);</string>
-          </property>
-          <property name="text">
-           <string>Name member </string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lineEdit_35"/>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QPushButton" name="pushButton_21">
-       <property name="geometry">
-        <rect>
-         <x>300</x>
-         <y>70</y>
-         <width>91</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(125, 125, 125);
-font: 700 italic 12pt &quot;Segoe UI&quot;;
-font: 700 10pt &quot;Segoe UI&quot;;
-border-top-color: rgb(255, 42, 81);
-font: 8pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 0);</string>
-       </property>
-       <property name="text">
-        <string>Add</string>
-       </property>
-      </widget>
-      <widget class="QWidget" name="horizontalLayoutWidget_20">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>60</y>
-         <width>291</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_20">
-        <item>
-         <widget class="QLabel" name="label_40">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(125, 125, 125);
-font: 14pt &quot;Segoe UI&quot;;
-font: 700 10pt &quot;Segoe UI&quot;;
-border-top-color: rgb(255, 42, 81);
-font: 8pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 0);</string>
-          </property>
-          <property name="text">
-           <string> Rol person   </string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lineEdit_36"/>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_19">
-      <property name="geometry">
-       <rect>
-        <x>400</x>
-        <y>150</y>
-        <width>381</width>
-        <height>111</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(16, 16, 16);</string>
-      </property>
-      <property name="title">
-       <string>Delete Project</string>
-      </property>
-      <widget class="QWidget" name="horizontalLayoutWidget_21">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>30</y>
-         <width>371</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_21">
-        <item>
-         <widget class="QLabel" name="label_42">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(125, 125, 125);
-font: 700 10pt &quot;Segoe UI&quot;;
-border-top-color: rgb(255, 42, 81);
-font: 8pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 0);</string>
-          </property>
-          <property name="text">
-           <string>Name Project  </string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lineEdit_38"/>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QPushButton" name="pushButton_22">
-       <property name="geometry">
-        <rect>
-         <x>270</x>
-         <y>70</y>
-         <width>101</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(125, 125, 125);
-font: 700 italic 12pt &quot;Segoe UI&quot;;
-font: 700 10pt &quot;Segoe UI&quot;;
-border-top-color: rgb(255, 42, 81);
-font: 8pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 0);</string>
-       </property>
-       <property name="text">
-        <string>Delete</string>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_20">
-      <property name="geometry">
-       <rect>
-        <x>400</x>
-        <y>270</y>
-        <width>381</width>
-        <height>111</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(16, 16, 16);</string>
-      </property>
-      <property name="title">
-       <string>Delete member</string>
-      </property>
-      <widget class="QWidget" name="horizontalLayoutWidget_22">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>30</y>
-         <width>371</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_22">
-        <item>
-         <widget class="QLabel" name="label_43">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(125, 125, 125);
-font: 700 10pt &quot;Segoe UI&quot;;
-border-top-color: rgb(255, 42, 81);
-font: 8pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 0);</string>
-          </property>
-          <property name="text">
-           <string>Name member </string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lineEdit_39"/>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QPushButton" name="pushButton_23">
-       <property name="geometry">
-        <rect>
-         <x>270</x>
-         <y>70</y>
-         <width>101</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(125, 125, 125);
-font: 700 italic 12pt &quot;Segoe UI&quot;;
-font: 700 10pt &quot;Segoe UI&quot;;
-border-top-color: rgb(255, 42, 81);
-font: 8pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 0);</string>
-       </property>
-       <property name="text">
-        <string>Delete</string>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_21">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>270</y>
-        <width>401</width>
-        <height>111</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(0, 0, 0);</string>
-      </property>
-      <property name="title">
-       <string>Change status</string>
-      </property>
-      <widget class="QWidget" name="horizontalLayoutWidget_23">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>30</y>
-         <width>291</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_23">
-        <item>
-         <widget class="QLabel" name="label_44">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(125, 125, 125);
-font: 14pt &quot;Segoe UI&quot;;
-font: 700 10pt &quot;Segoe UI&quot;;
-border-top-color: rgb(255, 42, 81);
-font: 8pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 0);</string>
-          </property>
-          <property name="text">
-           <string>Name project </string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lineEdit_40"/>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QPushButton" name="pushButton_24">
-       <property name="geometry">
-        <rect>
-         <x>300</x>
-         <y>70</y>
-         <width>91</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(125, 125, 125);
-font: 700 italic 12pt &quot;Segoe UI&quot;;
-font: 700 10pt &quot;Segoe UI&quot;;
-border-top-color: rgb(255, 42, 81);
-font: 8pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 0);</string>
-       </property>
-       <property name="text">
-        <string>Chenge</string>
-       </property>
-      </widget>
-      <widget class="QWidget" name="horizontalLayoutWidget_24">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>60</y>
-         <width>291</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_24">
-        <item>
-         <widget class="QLabel" name="label_45">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(125, 125, 125);
-border-top-color: rgb(255, 42, 81);
-font: 10pt &quot;Segoe UI&quot;;
-
-color: rgb(255, 255, 0);</string>
-          </property>
-          <property name="text">
-           <string>New status</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lineEdit_41"/>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-     <widget class="QPushButton" name="pushButton_25">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>470</y>
-        <width>201</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(125, 125, 125);
-font: 700 10pt &quot;Segoe UI&quot;;
-border-top-color: rgb(255, 42, 81);
-
-color: rgb(255, 255, 0);</string>
-      </property>
-      <property name="text">
-       <string>Viow Project</string>
       </property>
      </widget>
     </widget>
@@ -1391,6 +929,450 @@ color: rgb(255, 255, 0);</string>
       </property>
       <property name="text">
        <string>Viow Teams</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 170, 127);
+background-color: rgb(255, 232, 187);</string>
+     </property>
+     <attribute name="title">
+      <string>Tab 1</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_17">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>781</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="title">
+       <string>creat Project</string>
+      </property>
+      <widget class="QPushButton" name="pushButton_20">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>60</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(125, 125, 125);
+font: 700 10pt &quot;Segoe UI&quot;;
+border-top-color: rgb(255, 42, 81);
+font: 8pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 0);</string>
+       </property>
+       <property name="text">
+        <string>OK</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="formLayoutWidget_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>601</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <layout class="QFormLayout" name="formLayout_5">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <widget class="QLabel" name="label_38">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(125, 125, 125);
+font: 700 10pt &quot;Segoe UI&quot;;
+border-top-color: rgb(255, 42, 81);
+font: 8pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 0);</string>
+            </property>
+            <property name="text">
+             <string>name Project</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_41">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(125, 125, 125);
+font: 700 10pt &quot;Segoe UI&quot;;
+border-top-color: rgb(255, 42, 81);
+font: 8pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 0);</string>
+            </property>
+            <property name="text">
+             <string>Project information</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="1">
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <widget class="QLineEdit" name="lineEdit_34"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_37"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_18">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>150</y>
+        <width>401</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="title">
+       <string>Add person</string>
+      </property>
+      <widget class="QWidget" name="horizontalLayoutWidget_19">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>30</y>
+         <width>291</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_19">
+        <item>
+         <widget class="QLabel" name="label_39">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(125, 125, 125);
+font: 14pt &quot;Segoe UI&quot;;
+font: 700 10pt &quot;Segoe UI&quot;;
+border-top-color: rgb(255, 42, 81);
+font: 8pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>Name member </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_35"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="pushButton_21">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>70</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(125, 125, 125);
+font: 700 italic 12pt &quot;Segoe UI&quot;;
+font: 700 10pt &quot;Segoe UI&quot;;
+border-top-color: rgb(255, 42, 81);
+font: 8pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 0);</string>
+       </property>
+       <property name="text">
+        <string>Add</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="horizontalLayoutWidget_20">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>60</y>
+         <width>291</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_20">
+        <item>
+         <widget class="QLabel" name="label_40">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(125, 125, 125);
+font: 14pt &quot;Segoe UI&quot;;
+font: 700 10pt &quot;Segoe UI&quot;;
+border-top-color: rgb(255, 42, 81);
+font: 8pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string> Rol person   </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_36"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_19">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>150</y>
+        <width>381</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(16, 16, 16);</string>
+      </property>
+      <property name="title">
+       <string>Delete Project</string>
+      </property>
+      <widget class="QWidget" name="horizontalLayoutWidget_21">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>371</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_21">
+        <item>
+         <widget class="QLabel" name="label_42">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(125, 125, 125);
+font: 700 10pt &quot;Segoe UI&quot;;
+border-top-color: rgb(255, 42, 81);
+font: 8pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>Name Project  </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_38"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="pushButton_22">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>70</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(125, 125, 125);
+font: 700 italic 12pt &quot;Segoe UI&quot;;
+font: 700 10pt &quot;Segoe UI&quot;;
+border-top-color: rgb(255, 42, 81);
+font: 8pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 0);</string>
+       </property>
+       <property name="text">
+        <string>Delete</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_20">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>270</y>
+        <width>381</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(16, 16, 16);</string>
+      </property>
+      <property name="title">
+       <string>Delete member</string>
+      </property>
+      <widget class="QWidget" name="horizontalLayoutWidget_22">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>371</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_22">
+        <item>
+         <widget class="QLabel" name="label_43">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(125, 125, 125);
+font: 700 10pt &quot;Segoe UI&quot;;
+border-top-color: rgb(255, 42, 81);
+font: 8pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>Name member </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_39"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="pushButton_23">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>70</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(125, 125, 125);
+font: 700 italic 12pt &quot;Segoe UI&quot;;
+font: 700 10pt &quot;Segoe UI&quot;;
+border-top-color: rgb(255, 42, 81);
+font: 8pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 0);</string>
+       </property>
+       <property name="text">
+        <string>Delete</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_21">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>270</y>
+        <width>401</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="title">
+       <string>Change status</string>
+      </property>
+      <widget class="QWidget" name="horizontalLayoutWidget_23">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>30</y>
+         <width>291</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_23">
+        <item>
+         <widget class="QLabel" name="label_44">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(125, 125, 125);
+font: 14pt &quot;Segoe UI&quot;;
+font: 700 10pt &quot;Segoe UI&quot;;
+border-top-color: rgb(255, 42, 81);
+font: 8pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>Name project </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_40"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="pushButton_24">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>70</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(125, 125, 125);
+font: 700 italic 12pt &quot;Segoe UI&quot;;
+font: 700 10pt &quot;Segoe UI&quot;;
+border-top-color: rgb(255, 42, 81);
+font: 8pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 0);</string>
+       </property>
+       <property name="text">
+        <string>Chenge</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="horizontalLayoutWidget_24">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>60</y>
+         <width>291</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_24">
+        <item>
+         <widget class="QLabel" name="label_45">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(125, 125, 125);
+border-top-color: rgb(255, 42, 81);
+font: 10pt &quot;Segoe UI&quot;;
+
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>New status</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_41"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButton_25">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>470</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(125, 125, 125);
+font: 700 10pt &quot;Segoe UI&quot;;
+border-top-color: rgb(255, 42, 81);
+
+color: rgb(255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Viow Project</string>
       </property>
      </widget>
     </widget>
