@@ -13,7 +13,7 @@ class signup : public QWidget
     Q_OBJECT
 
 public:
-    explicit signup(QMap<QString,QString>* page,QMap<QString,QString>* mlist,QWidget *parent = nullptr);
+    explicit signup(QWidget *parent = nullptr);
     ~signup();
 
 private slots:
@@ -21,8 +21,8 @@ private slots:
 
 private:
     Ui::signup *ui;
-    QMap<QString,QString>* page;
-    QMap<QString,QString>* mlist;
+    QMap<QString,QString> page;
+    QMap<QString,QString> mlist;
 
 };
 

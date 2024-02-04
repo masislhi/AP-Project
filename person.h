@@ -29,6 +29,7 @@ public:
     Organization *organiation() const;
     void setOrganiation(Organization *newOrganiation);
 
+
 private:
     std::string m_name;
     std::string m_role;

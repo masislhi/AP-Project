@@ -27,6 +27,7 @@ void Person::setRole(const std::string &newRole)
     m_role = newRole;
 }
 
+
 Organization *Person::organiation() const
 {
     return m_organiation;

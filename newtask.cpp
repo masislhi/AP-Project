@@ -4,6 +4,7 @@
 #include <QTextStream>
 #include <QCoreApplication>
 #include <string>
+#include "task.h"
 
 #define CURRENT_SOURCE_DIR std::string(__FILE__).substr(0,std::string(__FILE__).find_last_of("/\\"))
 newtask::newtask(QWidget *parent)
@@ -22,7 +23,7 @@ newtask::~newtask()
 void newtask::on_pushButton_clicked()
 {
     QString path=QString::fromStdString(CURRENT_SOURCE_DIR);
-    QFile file(path+"/"+use+".txt");
+    QFile file(path+"/"+use+"_"+ui->name->text()+".txt");
     if(file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append))
     {
         QTextStream out(&file);
@@ -35,5 +36,9 @@ void newtask::on_pushButton_clicked()
     }
     file.close();
     close();
+    Task *t=new Task();
+    t->user(use);
+    t->show();
+
 }
 
