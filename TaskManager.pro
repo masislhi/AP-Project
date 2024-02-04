@@ -10,6 +10,8 @@ INCLUDEPATH+=./
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    OrganizationManager.cpp \
+    PersonManager.cpp \
     Team.cpp \
     main.cpp \
     organization.cpp \
@@ -18,6 +20,8 @@ SOURCES += \
     taskmanager.cpp
 
 HEADERS += \
+    OrganizationManager.h \
+    PersonManager.h \
     Team.h \
     organization.h \
     person.h \

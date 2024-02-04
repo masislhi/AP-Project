@@ -1,21 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author/>
- <comment/>
- <exportmacro/>
  <class>Organization</class>
- <widget class="QWidget" name="Organization">
+ <widget class="QDialog" name="Organization">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>422</width>
+    <height>340</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Dialog</string>
   </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTableWidget" name="tableWidget">
+     <column>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Task</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Information</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>TotalMember</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
  </widget>
- <pixmapfunction/>
+ <resources/>
  <connections/>
 </ui>

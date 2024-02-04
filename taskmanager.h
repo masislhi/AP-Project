@@ -2,27 +2,34 @@
 #define TASKMANAGER_H
 
 #include <QMainWindow>
-#include <QObject>
 #include <QMessageBox>
-#include "organization.h"
+#include <QObject>
+#include "PersonManager.h"
 #include "Team.h"
+#include "organization.h"
+#include "qhash.h"
+#include <OrganizationManager.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class TaskManager; }
 QT_END_NAMESPACE
+
+Q_DECLARE_METATYPE(QList<Organization *>)
 
 class TaskManager : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    TaskManager(QWidget *parent = nullptr);
+    TaskManager(QMainWindow *parent = nullptr);
     ~TaskManager();
 
-    void Create_Organ(const QString& name ,const QString& task,const QString& information);
+protected:
+    void createOrganizaition(const QString &name, const QString &task, const QString &information);
+    void createPerson(const QString &name, const QString &role);
 
 signals:
-    void organizationCreatedSignal(QString,QString,QString);
+    void organizationCreatedSignal(QString, QString, QString);
 private slots:
 
     void on_Send_Info_Organ_clicked();
@@ -35,13 +42,17 @@ private slots:
 
     void on_Delete_member_clicked();
 
+    void on_viewOrganizations_clicked();
 
 private:
+    // Organization* organization;
 
-   // Organization* organization;
-    std::vector<Organization *> organizations;
-    Team* team;
+    Team *m_team = nullptr;
+    OrganizationManager *m_organizationManager = nullptr;
+    PersonManager *m_personManager = nullptr;
+    Organization *m_curentOrganizaition = nullptr;
+
 private:
-    Ui::TaskManager *ui;
+    Ui::TaskManager *ui = nullptr;
 };
 #endif // TASKMANAGER_H
