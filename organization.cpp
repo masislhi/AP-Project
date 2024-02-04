@@ -1,19 +1,21 @@
 #include "organization.h"
-#include "ui_organization.h"
 
-Organization::Organization(QString name ,QString task,QString information,QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::Organization)
+Organization::Organization(QString name, QString task, QString information, QObject *parent)
+    : QObject(parent)
 {
-    ui->setupUi(this);
     this->m_name=name;
-    this->Task_Organization=task;
-    Info_Organization=information;
+    this->m_task = task;
+    m_info = information;
 }
-
+Organization::Organization(QString name, QString task, QObject *parent)
+    : QObject(parent)
+{
+    this->m_name = name;
+    this->m_task = task;
+    m_info = "";
+}
 Organization::~Organization()
 {
-    delete ui;
 }
 
 //void Organization::createOrganization(const QString& name)
@@ -22,10 +24,22 @@ Organization::~Organization()
 //    emit organizationCreated(name);
 //}
 
-void Organization::addMember(const QString& member ,const QString& memberRol)
+void Organization::addMember(Person *person)
 {
-    m_memberList.append(member);
-    emit memberAdded(member);
+    if (person->organiation() != nullptr) {
+        person->organiation()->removeMember(QString::fromStdString(person->name()));
+    }
+
+    person->setOrganiation(this);
+    m_memberList.insert(QString::fromStdString(person->name()), person);
+    emit memberAdded(QString::fromStdString(person->name()));
+}
+
+void Organization::deleteOrganization()
+{
+    m_name.clear();
+    m_memberList.clear();
+    emit organizationDeleted();
 }
 
 void Organization::editOrganization(const QString& newName)
@@ -34,16 +48,10 @@ void Organization::editOrganization(const QString& newName)
     m_name = newName;
     emit organizationEdited(newName);
 }
-void Organization::deleteOrganization()
-{
-    m_name.clear();
-    m_memberList.clear();
-    emit organizationDeleted();
-}
 
 void Organization::removeMember(const QString& member)
 {
-    m_memberList.removeOne(member);
+    m_memberList.remove(member);
     emit memberRemoved(member);
 
 }
@@ -56,7 +64,7 @@ void Organization::changeMemberRole(const QString& member, const QString& newRol
     emit roleChanged(member, newRole);
 }
 
-QList<QString> Organization::getMemberList()
+QHash<QString, Person *> Organization::getMemberList()
 
 {
     return m_memberList;
@@ -71,4 +79,48 @@ QList<QString> Organization::getFilteredAndSortedMembers(const QString& filter)
     // Add the filtered and sorted members to "filteredList"
 
     return filteredList;
+}
+
+QString Organization::name() const
+{
+    return m_name;
+}
+
+void Organization::setName(const QString &newName)
+{
+    if (m_name == newName)
+        return;
+    m_name = newName;
+    emit nameChanged(m_name);
+}
+
+QString Organization::task() const
+{
+    return m_task;
+}
+
+void Organization::setTask(const QString &newTask)
+{
+    if (m_task == newTask)
+        return;
+    m_task = newTask;
+    emit taskChanged(m_task);
+}
+
+QString Organization::info() const
+{
+    return m_info;
+}
+
+int Organization::totalMember() const
+{
+    return m_memberList.count();
+}
+
+void Organization::setInfo(const QString &newInfo)
+{
+    if (m_info == newInfo)
+        return;
+    m_info = newInfo;
+    emit infoChanged(m_info);
 }

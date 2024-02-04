@@ -33,7 +33,7 @@
      <string notr="true">background-color: rgb(191, 191, 191);</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_5">
      <property name="styleSheet">
@@ -83,7 +83,7 @@ color: rgb(255, 255, 0);</string>
          <x>10</x>
          <y>30</y>
          <width>601</width>
-         <height>101</height>
+         <height>102</height>
         </rect>
        </property>
        <layout class="QFormLayout" name="formLayout">
@@ -454,7 +454,7 @@ color: rgb(255, 255, 0);</string>
        </layout>
       </widget>
      </widget>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="viewOrganizations">
       <property name="geometry">
        <rect>
         <x>260</x>
@@ -1050,8 +1050,8 @@ color: rgb(255, 255, 0);</string>
         <rect>
          <x>0</x>
          <y>30</y>
-         <width>291</width>
-         <height>31</height>
+         <width>391</width>
+         <height>41</height>
         </rect>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_19">
@@ -1095,36 +1095,6 @@ color: rgb(255, 255, 0);</string>
        <property name="text">
         <string>Add</string>
        </property>
-      </widget>
-      <widget class="QWidget" name="horizontalLayoutWidget_20">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>60</y>
-         <width>291</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_20">
-        <item>
-         <widget class="QLabel" name="label_40">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(125, 125, 125);
-font: 14pt &quot;Segoe UI&quot;;
-font: 700 10pt &quot;Segoe UI&quot;;
-border-top-color: rgb(255, 42, 81);
-font: 8pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 0);</string>
-          </property>
-          <property name="text">
-           <string> Rol person   </string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lineEdit_36"/>
-        </item>
-       </layout>
       </widget>
      </widget>
      <widget class="QGroupBox" name="groupBox_19">
@@ -1394,7 +1364,7 @@ background-color: rgb(255, 220, 220);</string>
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>25</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuTask_Manager">
